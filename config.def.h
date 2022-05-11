@@ -11,11 +11,16 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#ff4500";
+static const char col_cyan[]        = "#ff8c00";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+};
+
+static const char *const autostart[] = {
+	"dwmblocks", NULL,
+	NULL /* terminate */
 };
 
 /* tagging */
@@ -64,8 +69,8 @@ static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = rofidesktopcmd } },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = roficmd } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = rofidesktopcmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
