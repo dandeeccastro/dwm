@@ -21,6 +21,7 @@ static const char *colors[][3]      = {
 
 static const char *const autostart[] = {
 	"dwmblocks", NULL,
+    "feh", "--bg-fill", ".config/wallpapers/0.png", NULL, 
 	NULL /* terminate */
 };
 
