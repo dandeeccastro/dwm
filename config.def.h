@@ -22,8 +22,11 @@ static char *colors[][3] = {
 };
 
 static const char *const autostart[] = {
+	"feh", "--bg-fill", "$HOME/.config/wallpapers/0", NULL, 
+	"systembus-notify", NULL, 
 	"dwmblocks", NULL,
-    "feh", "--bg-fill", ".config/wallpapers/0.png", NULL, 
+	"dunst", NULL,
+	"picom", NULL, 
 	NULL /* terminate */
 };
 
